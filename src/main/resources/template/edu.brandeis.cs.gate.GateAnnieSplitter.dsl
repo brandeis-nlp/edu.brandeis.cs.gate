@@ -37,7 +37,7 @@
             {
                 metadata {
                     contains {
-                      "http://vocab.lappsgrid.org/Token#pos" {
+                      "http://vocab.lappsgrid.org/Sentence" {
                           producer  "edu.brandeis.cs.gate.GateAnnieSplitter:0.0.1-SNAPSHOT"
                           type  "splitter:gate_annie"
                       }

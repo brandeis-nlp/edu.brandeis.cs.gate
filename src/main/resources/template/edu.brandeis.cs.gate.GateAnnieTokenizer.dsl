@@ -52,7 +52,7 @@
             {
                 metadata {
                     contains {
-                      "http://vocab.lappsgrid.org/Token#pos" {
+                      "http://vocab.lappsgrid.org/Token" {
                           producer  "edu.brandeis.cs.gate.GateAnnieTokenizer:0.0.1-SNAPSHOT"
                           type  "tokenizer:gate_annie"
                       }

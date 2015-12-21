@@ -54,7 +54,7 @@
             {
                 metadata {
                     contains {
-                      "http://vocab.lappsgrid.org/Token#pos" {
+                      "http://vocab.lappsgrid.org/Token" {
                           producer  "edu.brandeis.cs.gate.GateAnniePOSTagger:0.0.1-SNAPSHOT"
                           type  "tokenizer:gate_opennlp"
                       }

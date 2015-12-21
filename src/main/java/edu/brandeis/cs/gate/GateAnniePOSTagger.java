@@ -1,7 +1,7 @@
 package edu.brandeis.cs.gate;
 
 import edu.brandeis.cs.json.XmlToJson;
-import edu.brandeis.cs.uima.UimaServiceException;
+import edu.brandeis.cs.service.ServiceException;
 import org.lappsgrid.serialization.lif.Container;
 
 /**
@@ -17,14 +17,14 @@ public class GateAnniePOSTagger extends AbstractGateAnnieService {
     }
 
     @Override
-    public String execute(Container json) throws UimaServiceException {
+    public String execute(Container json) throws ServiceException {
         String txt = json.getText();
         try {
             String xml = getXML(txt);
             return XmlToJson.transform(xml, dsl);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new UimaServiceException(e.getMessage());
+            throw new ServiceException(e.getMessage());
         }
     }
 }

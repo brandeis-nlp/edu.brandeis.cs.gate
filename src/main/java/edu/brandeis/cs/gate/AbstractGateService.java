@@ -1,29 +1,13 @@
 package edu.brandeis.cs.gate;
 
-import edu.brandeis.cs.uima.AbstractWebService;
-import edu.brandeis.cs.uima.UimaServiceException;
+import edu.brandeis.cs.service.AbstractWebService;
 import gate.*;
 import gate.util.Out;
 import gate.util.persistence.PersistenceManager;
 import org.apache.commons.io.FileUtils;
-import org.apache.xerces.impl.io.UTF8Reader;
-import org.lappsgrid.api.WebService;
-import org.lappsgrid.metadata.ServiceMetadata;
-import org.lappsgrid.serialization.Data;
-import org.lappsgrid.serialization.Serializer;
-import org.lappsgrid.serialization.lif.Container;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
-
-import static org.lappsgrid.discriminator.Discriminators.Uri;
 
 
 public abstract class AbstractGateService extends AbstractWebService {

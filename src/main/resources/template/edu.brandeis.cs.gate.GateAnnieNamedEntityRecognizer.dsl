@@ -39,7 +39,7 @@
                 metadata {
                     contains {
                       "http://vocab.lappsgrid.org/NamedEntity" {
-                          producer  "edu.brandeis.cs.gate.GateAnniePOSTagger:0.0.1-SNAPSHOT"
+                          producer  "edu.brandeis.cs.gate.GateAnnieNamedEntityRecognizer:0.0.1-SNAPSHOT"
                           type  "ner:gate_annie"
                       }
                     }

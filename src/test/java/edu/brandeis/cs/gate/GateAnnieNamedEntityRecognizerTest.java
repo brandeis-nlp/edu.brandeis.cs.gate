@@ -6,13 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** 
-* GateAnnieNamedEntityRecoginzer Tester. 
+* GateAnnieNamedEntityRecognizer Tester.
 * 
 * @author <Authors name> 
 * @since <pre>ʮ���� 21, 2015</pre> 
 * @version 1.0 
 */ 
-public class GateAnnieNamedEntityRecoginzerTest { 
+public class GateAnnieNamedEntityRecognizerTest {
 
 @Before
 public void before() throws Exception { 

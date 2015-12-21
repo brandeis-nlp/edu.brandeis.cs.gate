@@ -7,12 +7,12 @@ import org.lappsgrid.serialization.lif.Container;
 /**
  * Created by shi on 12/20/15.
  */
-public class GateAnnieNamedEntityRecoginzer extends AbstractGateAnnieService {
+public class GateAnnieNamedEntityRecognizer extends AbstractGateAnnieService {
 
 
     String dsl = null;
 
-    public GateAnnieNamedEntityRecoginzer(){
+    public GateAnnieNamedEntityRecognizer(){
         dsl = getTemplate();
     }
 

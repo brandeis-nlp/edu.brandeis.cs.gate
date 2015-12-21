@@ -1,19 +1,19 @@
 {
   "$schema" : "http://vocab.lappsgrid.org/schema/service-schema-1.0.0.json",
-  "name" : "edu.brandeis.cs.lappsgrid.stanford.corenlp.Tokenizer",
+  "name" : "edu.brandeis.cs.gate.GateAnniePOSTagger",
   "version" : "2.0.0",
-  "description" : "DkPro  Standford NLP Tokenizer",
+  "description" : "Gate Annie  POSTagger",
   "vendor" : "http://www.cs.brandeis.edu/",
   "allow" : "http://vocab.lappsgrid.org/ns/allow#any",
   "license" : "http://vocab.lappsgrid.org/ns/license#apache-2.0",
   "requires" : {
     "language" : [ "en" ],
     "format" : [ "http://vocab.lappsgrid.org/ns/media/jsonld#lif" ],
-    "annotations" : [ "http://vocab.lappsgrid.org/Token" ]
+    "annotations" : [ "http://vocab.lappsgrid.org/Token#pos" ]
   },
   "produces" : {
     "language" : [ "en" ],
     "format" : [ "http://vocab.lappsgrid.org/ns/media/jsonld#lif" ],
-    "annotations" : [ "http://vocab.lappsgrid.org/Token" ]
+    "annotations" : [ "http://vocab.lappsgrid.org/Token#pos" ]
   }
 }

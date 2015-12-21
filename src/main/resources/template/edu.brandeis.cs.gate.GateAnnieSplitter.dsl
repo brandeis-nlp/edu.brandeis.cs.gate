@@ -1,43 +1,23 @@
 {
 
-    def targetText = %.s_(&:Sofa.@sofaString)
+    def targetText =  &:TextWithNodes.text()
+
     def targetAnnotations = []
 
-    targetAnnotations += &:Sentence.foreach {
-          def targetId = %.s_(&."@xmi:id")
-          def targetBegin = %.i_(&.@begin)
-          def targetEnd = %.i_(&.@end)
+    targetAnnotations += &:AnnotationSet.Annotation.findAll{&.@Type=="Sentence"}.foreach{
+          def targetId = %.s_(&.@Id)
+          def targetBegin = %.i_(&.@StartNode)
+          def targetEnd = %.i_(&.@EndNode)
           [
             id: targetId,
             start: targetBegin,
             end:  targetEnd,
             "@type":  "http://vocab.lappsgrid.org/Sentence",
             features: [
-                sentence: targetText.substring(targetBegin, targetEnd)
+                word: targetText.substring(targetBegin, targetEnd)
             ]
           ]
     }
-
-
-    targetAnnotations += &:Token.foreach {
-          def targetId = %.s_(&."@xmi:id")
-          def targetBegin = %.i_(&.@begin)
-          def targetEnd = %.i_(&.@end)
-          def pos = %.s_(&.@pos)
-          def targetPosTag = &:"*".findAll{ &."@xmi:id" == pos }.foreach{%.s_(&.@PosValue)}[0]
-          [
-            id: targetId,
-            start: targetBegin,
-            end:  targetEnd,
-            "@type":  "http://vocab.lappsgrid.org/Token",
-            features: [
-                word: targetText.substring(targetBegin, targetEnd),
-                pos: (targetPosTag)
-            ]
-          ]
-    }
-
-
 
 
     discriminator  "http://vocab.lappsgrid.org/ns/media/jsonld"
@@ -58,8 +38,8 @@
                 metadata {
                     contains {
                       "http://vocab.lappsgrid.org/Token#pos" {
-                          producer  "edu.brandeis.cs.lappsgrid.stanford.corenlp.POSTagger:2.0.1-SNAPSHOT"
-                          type  "tagger:stanford"
+                          producer  "edu.brandeis.cs.gate.GateAnnieSplitter:0.0.1-SNAPSHOT"
+                          type  "splitter:gate_annie"
                       }
                     }
                 }
